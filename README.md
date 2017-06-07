@@ -9,6 +9,12 @@ Link: https://nodejs.org/en/
 # 2) Angular-cli	
 Link: https://cli.angular.io/  or https://github.com/angular/angular-cli
 
+Useful links 
+
+https://angular.io/docs/ts/latest/tutorial/
+https://github.com/angular/angular-cli/wiki
+http://angularjs.blogspot.ca/
+
 # 3) Java - 1.8 
 
 # 4) Ecplise - Neon 
@@ -48,3 +54,13 @@ From Eclipse Market Place
 
 # Have you notice your code changes are watched, deployed, and refreshed automatically.
 
+# UI Project Setup
+
+1) Create new Project using command 'ng new app-client'   or Use Eclipse plugin to create
+
+2) run npm start - Verify application working - http://localhost:4200/
+   note : Dont use ng serve, use npm start
+
+
+# Client-Server Integration
+ TO be completed later
