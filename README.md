@@ -25,7 +25,7 @@ From Eclipse Market Place
 	Note: Change “Packaging” to “War” if you intend to deploy your project to a Servlet Container (like Tomcat etc).
 
 2) Click next, and select any number of Spring Boot Starters you may need	
-3) Click finish. The “<<Given Name>>” project will be created in your workspace. Next, right-click on the project and go to “Spring Tools”, and click “Add Boot Devtools.” This will enable the server side code watch and hot deployment features.
+3) Click finish. The project will be created in your workspace. Next, right-click on the project and go to “Spring Tools”, and click “Add Boot Devtools.” This will enable the server side code watch and hot deployment features.
 4) Run application to confirm changes are looking good so far.
 
 # REST controller 
