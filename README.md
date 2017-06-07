@@ -46,3 +46,5 @@ From Eclipse Market Place
 
 2) Access http://localhost:8080/api/greetings  to check service
 
+# Have you notice your code changes are watched, deployed, and refreshed automatically.
+
