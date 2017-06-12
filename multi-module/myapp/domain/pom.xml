@@ -6,6 +6,19 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>domain</artifactId>
+  <packaging>jar</packaging>
   <name>Domain Project</name>
   <description>Domain Project - for all Java domain objects</description>
-</project>
+  
+  
+  	<dependencies>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+  
+</project>	

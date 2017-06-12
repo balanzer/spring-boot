@@ -8,8 +8,29 @@
 	<name>Sample Project to do multi module build</name>
 	<description>Sample Project to do multi module build</description>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<junit.version>4.12</junit.version>
+	</properties>
+
+
 	<modules>
 		<module>domain</module>
 	</modules>
+
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+
+
 
 </project>
