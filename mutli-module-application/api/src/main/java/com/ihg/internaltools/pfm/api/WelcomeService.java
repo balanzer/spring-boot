@@ -18,16 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class WelcomeService {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(WelcomeService.class);
+    private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
     @Value("${default.message:Default message not found.}")
     private String defaultMessage;
 
     @RequestMapping("/")
-    public String greetings() {
-        LOGGER.debug("Welcome - debug {} ", this.defaultMessage);
-        LOGGER.error("Welcome - error {} ", this.defaultMessage);
-        LOGGER.info("Welcome - info {} ", this.defaultMessage);
+    public String defaultAction() {
+        this.LOGGER.info("Application default page - welcome message : {} ", this.defaultMessage);
         return this.defaultMessage;
     }
 }
