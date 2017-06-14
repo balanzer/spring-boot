@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -18,14 +19,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class WelcomeService {
 
-    private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
+    private static final Logger LOGGER = LoggerFactory.getLogger(WelcomeService.class);
 
     @Value("${default.message:Default message not found.}")
     private String defaultMessage;
 
     @RequestMapping("/")
     public String defaultAction() {
-        this.LOGGER.info("Application default page - welcome message : {} ", this.defaultMessage);
+        LOGGER.info("Application default page - welcome message : {} ", this.defaultMessage);
         return this.defaultMessage;
+    }
+
+    @RequestMapping(path = "/greetings", method = RequestMethod.GET)
+    public String greetings() {
+        LOGGER.info("Application greetings message");
+        return "Hello World....";
     }
 }
