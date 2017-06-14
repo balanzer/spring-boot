@@ -27,9 +27,14 @@ public class CampaignProcesController {
     public ResponseEntity<List<String>> list() {
         LOGGER.info("list");
         List<String> results = new ArrayList<>();
+        results.add("123");
+        results.add("123");
+        results.add("123");
+        results.add("123");
+        results.add("123");
+        results.add("123");
         if (results.isEmpty()) {
             return new ResponseEntity(HttpStatus.NO_CONTENT);
-            // You many decide to return HttpStatus.NOT_FOUND
         }
         return new ResponseEntity<>(results, HttpStatus.OK);
     }
