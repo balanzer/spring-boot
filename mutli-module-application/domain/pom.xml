@@ -6,8 +6,7 @@
         <artifactId>internaltools</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-	<groupId>com.ihg.internaltools.pfm</groupId>
-    <artifactId>domain</artifactId>
+	<artifactId>domain</artifactId>
     <packaging>jar</packaging>
     <name>Module - Domain</name>
     <description>Domain that contains all POJO to be used in the project. </description>

@@ -20,10 +20,10 @@
 	
 	 <modules>
       <module>domain</module>
-	  <module>dao</module>
+	  <!--<module>dao</module>
 	  <module>services</module>
-	  <module>serviceimpl</module>
-		<module>toolsApi</module>
+	  <module>serviceimpl</module> -->
+	  <module>toolsApi</module>
 	  
     </modules>
 
