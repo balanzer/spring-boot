@@ -10,6 +10,7 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ihg.internaltools.pfm.CampaignRequestService;
 import com.ihg.internaltools.pfm.cra.CampaignRequest;
 
 @RestController
@@ -25,11 +27,13 @@ public class CampaignProcesController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CampaignProcesController.class);
 
+    @Autowired
+    protected CampaignRequestService campaignService;
+    
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public ResponseEntity<List<CampaignRequest>> list() {
         LOGGER.info("list");
-        List<CampaignRequest> campaigns = new ArrayList<>();
-        campaigns.add(new CampaignRequest());
+        List<CampaignRequest> campaigns = campaignService.listAll();
         if (campaigns.isEmpty()) {
             return new ResponseEntity(HttpStatus.NO_CONTENT);
         }

@@ -17,14 +17,14 @@
 		<version>1.5.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	
+
 	 <modules>
       <module>domain</module>
-	  <!--<module>dao</module>
+	  <!--<module>dao</module> -->
 	  <module>services</module>
-	  <module>serviceimpl</module> -->
-	  <module>toolsApi</module>
-	  
+	  <module>serviceimpl</module>
+	  <module>api</module>
+
     </modules>
 
 	<properties>

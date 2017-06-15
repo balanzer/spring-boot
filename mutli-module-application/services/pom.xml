@@ -9,12 +9,22 @@
 	<name>Modules - Services Interface</name>
 	<description>Services Project</description>
 	<parent>
-        <groupId>com.ihg.internaltools.pfm</groupId>
-        <artifactId>internaltools</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
+		<groupId>com.ihg.internaltools.pfm</groupId>
+		<artifactId>internaltools</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+
 
 	<dependencies>
+
+		<dependency>
+			<groupId>com.ihg.internaltools.pfm</groupId>
+			<artifactId>domain</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
