@@ -17,25 +17,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ihg.internaltools.pfm.cra.CampaignRequest;
+
 @RestController
-@RequestMapping(value = "/cra/campaign", name = "CampaignProcesController", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/cra", name = "CampaignProcesController", produces = MediaType.APPLICATION_JSON_VALUE)
 public class CampaignProcesController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CampaignProcesController.class);
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public ResponseEntity<List<String>> list() {
+    public ResponseEntity<List<CampaignRequest>> list() {
         LOGGER.info("list");
-        List<String> results = new ArrayList<>();
-        results.add("123");
-        results.add("123");
-        results.add("123");
-        results.add("123");
-        results.add("123");
-        results.add("123");
-        if (results.isEmpty()) {
+        List<CampaignRequest> campaigns = new ArrayList<>();
+        campaigns.add(new CampaignRequest());
+        if (campaigns.isEmpty()) {
             return new ResponseEntity(HttpStatus.NO_CONTENT);
         }
-        return new ResponseEntity<>(results, HttpStatus.OK);
+        return new ResponseEntity<>(campaigns, HttpStatus.OK);
     }
 }
